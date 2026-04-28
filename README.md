@@ -1,4 +1,4 @@
-🔍 Automated API Fuzz Testing System
+# 🔍 Automated API Fuzz Testing System
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Flask](https://img.shields.io/badge/Flask-Target%20Server-lightgrey)](https://flask.palletsprojects.com/)
@@ -8,7 +8,7 @@ An automated, severity-aware Dynamic Application Security Testing (DAST) tool de
 
 This project simulates malicious, malformed, and edge-case inputs against a custom-built vulnerable Flask API, categorizing findings by severity (CRITICAL, HIGH, MEDIUM, LOW, INFO) and visualizing the results through a real-time Streamlit dashboard.
 
-🚀 Key Features
+## 🚀 Key Features
 
 * **Automated Fuzzing Engine:** Executes a diverse suite of payloads including SQL injection, XSS, Path Traversal, Unicode/Emoji handling, and deeply nested JSON structures.
 * **Custom Vulnerable Target Server:** Includes a purpose-built, locally hosted Flask API (`vulnerable_server.py`) containing deliberately mapped vulnerabilities for safe, offline testing.
@@ -16,7 +16,7 @@ This project simulates malicious, malformed, and edge-case inputs against a cust
 * **Interactive GUI Dashboard:** A real-time Streamlit application that provides live test execution, color-coded severity breakdowns, and detailed response findings.
 * **Comprehensive Audit Logging:** Generates structured text logs (`fuzz_results.txt`) and Matplotlib charts for post-execution forensic analysis.
 
-🎯 Vulnerabilities Tested
+## 🎯 Vulnerabilities Tested
 
 The fuzzer is equipped to detect and categorize the following vulnerability classes:
 1.  **Injection Flaws:** SQL Injection, Reflected Cross-Site Scripting (XSS).
@@ -25,7 +25,7 @@ The fuzzer is equipped to detect and categorize the following vulnerability clas
 4.  **Business Logic Flaws:** Negative transaction amounts, malformed date parsing.
 5.  **Data Integrity:** Type mismatches, Null value exceptions, and huge number parsing.
 
-🛠️ Technology Stack
+## 🛠️ Technology Stack
 
 * **Language:** Python 3.x
 * **Networking:** `requests`
@@ -33,7 +33,7 @@ The fuzzer is equipped to detect and categorize the following vulnerability clas
 * **Frontend / Visualization:** `Streamlit`, `matplotlib`
 * **Logging:** Native Python I/O & `datetime`
 
- 📁 Project Structure
+## 📁 Project Structure
 
 ├── dashboard/
 │   └── fuzz_dashboard.py      # Interactive Streamlit GUI
@@ -46,7 +46,7 @@ The fuzzer is equipped to detect and categorize the following vulnerability clas
 └── README.md
 
 
-⚙️ Installation & Setup
+## ⚙️ Installation & Setup
 
 1. **Clone the repository:**
    git clone https://github.com/YourUsername/YourRepositoryName.git
@@ -55,18 +55,18 @@ The fuzzer is equipped to detect and categorize the following vulnerability clas
 2. **Install the required dependencies:**
    pip install requests flask streamlit matplotlib pandas
 
- 💻 Usage
+## 💻 Usage
 
 To effectively test the fuzzer, you must first run the local vulnerable server, and then execute either the CLI fuzzer or the interactive dashboard.
 
-Step 1: Start the Target Server
+### Step 1: Start the Target Server
 Run the Flask API on your local machine (defaults to port 5000).
 
 cd src
 python vulnerable_server.py
 
 
- Step 2: Run the Fuzzer
+### Step 2: Run the Fuzzer
 Open a **new terminal window** and choose one of the following execution methods:
 
 **Option A: Streamlit Dashboard (Recommended)**
